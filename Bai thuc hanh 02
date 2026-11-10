@@ -4,12 +4,7 @@
 #include <cctype>
 #include <cstdlib>
 #include <ctime>
-
 using namespace std;
-
-// ==========================================
-// 1. L?P XE
-// ==========================================
 class Xe {
 private:
     int maXe;
@@ -18,11 +13,9 @@ private:
     int thoiGianDo;
     double phiDoXe;
     bool dangChiemCho;
-
 public:
     Xe() 
         : maXe(0), loaiXe(""), gioVao(0), thoiGianDo(0), phiDoXe(0.0), dangChiemCho(false) {}
-    
     Xe(int ma, const string& loai, int gio, int thoiLuong) 
         : maXe(ma), gioVao(gio), thoiGianDo(thoiLuong), dangChiemCho(true) {
         ganLoaiXe(loai);
@@ -33,7 +26,6 @@ public:
     int layThoiGianDo() const { return thoiGianDo; }
     double layPhiDoXe() const { return phiDoXe; }
     bool layDangChiemCho() const { return dangChiemCho; }
-
     void ganMaXe(int ma) { maXe = ma; }
     void ganLoaiXe(const string& loai) { 
         loaiXe = chuanHoaLoaiXe(loai); 
